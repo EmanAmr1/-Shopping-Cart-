@@ -4,10 +4,12 @@ import com.ecommerce.shoppingCart.exception.AlreadyExistsException;
 import com.ecommerce.shoppingCart.exception.ResourceNotFoundException;
 import com.ecommerce.shoppingCart.model.Category;
 import com.ecommerce.shoppingCart.repository.categoryRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class categoryService implements iCategoryService {
 
     private final categoryRepository categoryRepo;
