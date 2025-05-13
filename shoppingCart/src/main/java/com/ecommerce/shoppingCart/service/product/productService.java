@@ -7,10 +7,11 @@ import com.ecommerce.shoppingCart.repository.productRepository;
 import com.ecommerce.shoppingCart.exception.ProductNotFoundException;
 import com.ecommerce.shoppingCart.request.AddProductRequest;
 import com.ecommerce.shoppingCart.request.updateProductRequest;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
+@Service
 public class productService implements iProductService {
 
     private final productRepository productRepo;

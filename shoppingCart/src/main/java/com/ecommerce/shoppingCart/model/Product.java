@@ -1,5 +1,8 @@
 package com.ecommerce.shoppingCart.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,6 +25,7 @@ public class Product {
     private int inventory;
     private String description;
 
+    @JsonIgnoreProperties("products")
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "category_id")
     private Category category;
