@@ -6,6 +6,7 @@ import com.ecommerce.shoppingCart.model.Image;
 import com.ecommerce.shoppingCart.model.Product;
 import com.ecommerce.shoppingCart.repository.imageRepository;
 import com.ecommerce.shoppingCart.service.product.productService;
+import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.sql.rowset.serial.SerialBlob;
@@ -14,6 +15,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class imageService implements iImageService {
 
     private final imageRepository imageRepo;

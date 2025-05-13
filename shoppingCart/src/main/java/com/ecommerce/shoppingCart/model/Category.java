@@ -1,5 +1,6 @@
 package com.ecommerce.shoppingCart.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -16,6 +17,7 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+
 
     @OneToMany(mappedBy = "category")
     private List<Product> products;
